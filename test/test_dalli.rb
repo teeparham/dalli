@@ -11,7 +11,7 @@ describe 'Dalli' do
 
     should 'not warn about valid options' do
       dc = Dalli::Client.new('foo', :compress => true)
-      # Rails.logger.expects :warn
+      # Dalli.logger.expects :warn
       assert dc.instance_variable_get(:@options)[:compress]
     end
   end
